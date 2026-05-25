@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сильный пароль: конструктор безопасности</title>
+    <!-- Подключение Bootstrap CSS через CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+
+    <!-- ================= НАВИГАЦИЯ ================= -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">КУБАНОЧКА</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">Партнёры</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы/вопросы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+                <div class="ms-lg-3 d-flex gap-2 mt-2 mt-lg-0">
+                    <button class="btn btn-outline-light btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <a href="#contact" class="btn btn-cta btn-sm px-4">Стать партнёром</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= ГЕРОЙ-БАННЕР ================= -->
+    <section id="hero" class="hero-section">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-4 hero-content fade-in">
+                    <span class="hero-badge"><i class="fa-solid fa-leaf me-2"></i>Эко-производство Краснодарского
+                        края</span>
+                    <h1>Натуральное подсолнечное масло <span class="text-yellow">«Кубаночка»</span></h1>
+                    <p>Оптовые поставки напрямую от производителя. Полный цикл контроля качества: от семечка до бутылки.
+                        Щадящая очистка, витамин Е, экологичная упаковка.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#catalog" class="btn btn-cta rounded-pill px-4 py-3">Смотреть каталог</a>
+                        <a href="#about" class="btn btn-outline-light rounded-pill px-4 py-3">О производстве</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px; fill: #ffffff;">
+                <path
+                    d="M0,0V46.29c47,22,117,28,180,22,100-10,200-40,280-48,100-10,200-20,280-10,90,10,180,30,240,45,50,10,100,15,160,10,50-5,90-15,130-25,40-10,80-25,130-30,50-5,100-10,150-10V0Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ================= О КОМПАНИИ ================= -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-in">
+                    <div class="position-relative">
+                        <img src="1pods.png" alt="Производство Кубаночка" class="img-fluid">
+                        <div class="position-absolute top-50 start-100 translate-middle rounded-4 shadow-lg d-none d-md-flex flex-column justify-content-center border-start border-5 border-warning text-center"
+                            style="margin-left: -48px; min-width: 150px; min-height: 140px; ">
+                            <span class="fs-1 fw-bold text-success lh-1">15+</span>
+
+                            <span class="text-muted fw-medium mt-2">
+                                лет на рынке
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in ps-lg-6">
+                    <h2 class="section-title">О производстве <span class="text-green">«Кубаночка»</span></h2>
+                    <p class="lead text-muted">Мы не просто разливаем масло. Мы контролируем каждый этап: от выращивания
+                        подсолнечника на кубанских полях до бережной фасовки в экологичную тару.</p>
+                    <ul class="list-unstyled mt-4 mb-4">
+                        <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2 fa-lg"></i> Собственное
+                            производство полного цикла в Краснодарском крае</li>
+                        <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2 fa-lg"></i> Технология
+                            щадящей очистки, сохраняющая витамин Е</li>
+                        <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2 fa-lg"></i> Закупка только
+                            проверенного сырья у локальных фермеров</li>
+                        <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2 fa-lg"></i> Полное
+                            соответствие ГОСТ и ТУ, подтверждено сертификатами</li>
+                    </ul>
+                    <a href="#partners" class="btn btn-outline-success rounded-pill px-4 py-2">Сертификаты и
+                        документы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ПРЕИМУЩЕСТВА ================= -->
+    <section class="section-padding" style="background: linear-gradient(to right, #f9fbf5, #fff9e6);">
+        <div class="container">
+            <div class="text-center mb-5 fade-in">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <p class="text-muted fs-5">Гарантия качества, прозрачные условия и выгода для вашего бизнеса</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card-custom p-4 text-center h-100">
+                        <div class="adv-icon"><i class="fa-solid fa-industry"></i></div>
+                        <h5>Полный цикл</h5>
+                        <p class="text-muted mb-0">Контроль качества от поля до готовой продукции. Никаких посредников.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card-custom p-4 text-center h-100">
+                        <div class="adv-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h5>Щадящая очистка</h5>
+                        <p class="text-muted mb-0">Сохраняем полезные микроэлементы и натуральный вкус подсолнечника.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card-custom p-4 text-center h-100">
+                        <div class="adv-icon"><i class="fa-solid fa-recycle"></i></div>
+                        <h5>Эко-упаковка</h5>
+                        <p class="text-muted mb-0">Используем перерабатываемые материалы. Забота о природе и продукте.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card-custom p-4 text-center h-100">
+                        <div class="adv-icon"><i class="fa-solid fa-file-contract"></i></div>
+                        <h5>Сертификаты</h5>
+                        <p class="text-muted mb-0">Вся документация в открытом доступе. Соответствие ТР ТС и ГОСТ.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card-custom p-4 text-center h-100">
+                        <div class="adv-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h5>Программа лояльности</h5>
+                        <p class="text-muted mb-0">Специальные условия и отсрочки платежей при долгосрочном
+                            сотрудничестве.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card-custom p-4 text-center h-100">
+                        <div class="adv-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h5>Логистика под ключ</h5>
+                        <p class="text-muted mb-0">Доставка по всей РФ. Оптимальные маршруты и сохранность груза.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= КАТАЛОГ ================= -->
+    <section id="catalog" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5 fade-in">
+                <h2 class="section-title">Наша продукция</h2>
+                <p class="text-muted fs-5">Оптовые поставки в различных форматах фасовки. Нажмите кнопку, чтобы узнать
+                    цену за палету.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-in">
+                    <div class="card product-card ">
+                        <img src="1pg.png" alt="Нерафинированное масло" class="w-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Нерафинированное</h5>
+                            <p class="card-text text-muted">Натуральный вкус и аромат семян. Идеально для салатов и
+                                домашней выпечки.</p>
+                            <div class="mb-3">
+                                <span class="volume-badge">500 мл</span>
+                                <span class="volume-badge">1 л</span>
+                            </div>
+                            <div class="price-hidden">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-semibold">Цена за 1 палету:</span>
+                                    <span class="fs-4 fw-bold text-success">128 400 ₽</span>
+                                </div>
+                                <small class="text-muted d-block mb-2">📦 В палете: 90 бут. (по1 л/шт с учётом
+                                    упаковки)/ 120 бут. (500 мл)</small>
+                                <div class="progress mb-2" style="height: 6px;">
+                                    <div class="progress-bar bg-success" style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">* Мин. заказ: 1 палета. Доставка от 3 рабочих дней.</small>
+                                <small class="text-muted d-block mb-2"><br>ГОСТ <br>ТУ 1129-2013</small>
+                                <small class="text-muted d-block mb-2"><br>Масса нетто <br> 460 гр г</small>
+                                <small class="text-muted d-block mb-2"><br>Срок годности <br>20 месяцев</small>
+                            </div>
+                            <button type="button"
+                                class="btn btn-outline-primary w-100 rounded-pill py-2 mt-2 btn-price-toggle">Узнать
+                                оптовую цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card product-card h-100">
+                        <img src="2pg.png" alt="Рафинированное масло" class="w-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Рафинированное</h5>
+                            <p class="card-text text-muted">Дезодорированное, вымороженное. Без запаха. Лучший выбор для
+                                жарки и фритюра.</p>
+                            <div class="mb-3">
+                                <span class="volume-badge">500 мл</span>
+                                <span class="volume-badge">1 л</span>
+                                <span class="volume-badge">2 л</span>
+                                <span class="volume-badge">3 л</span>
+                                <span class="volume-badge">5 л</span>
+                            </div>
+                            <div class="price-hidden">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-semibold">Цена за 1 палету:</span>
+                                    <span class="fs-4 fw-bold text-success">145 800 ₽</span>
+                                </div>
+                                <small class="text-muted d-block mb-2">📦 В палете: 110 бут. (500 мл) / 90 бут. (1 л) /
+                                    <br> 78 бут. (2 л) / 70 бут.(3 л) / 50+- бут. (5 л )</small>
+                                <div class="progress mb-2" style="height: 6px;">
+                                    <div class="progress-bar bg-warning" style="width: 90%"></div>
+                                </div>
+                                <small class="text-muted">* Хит продаж. Отгрузка в день заявки. Количество
+                                    регулируется.</small>
+                                <small class="text-muted d-block mb-2"><br>ГОСТ <br>ТУ 1129-2013</small>
+                                <small class="text-muted d-block mb-2"><br>Масса нетто <br> 520 гр г</small>
+                                <small class="text-muted d-block mb-2"><br>Срок годности <br> 20 месяцев </small>
+                            </div>
+                            <button type="button"
+                                class="btn btn-outline-primary w-100 rounded-pill py-2 mt-2 btn-price-toggle">Узнать
+                                оптовую цену</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card product-card h-100">
+                        <img src="3pg.png" alt="Масло с оливковым" class="w-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">С добавлением оливкового</h5>
+                            <p class="card-text text-muted">Уникальная рецептура: 90% подсолнечное + 10% оливковое.
+                                Премиальный вкус. Трёхкратный отжим</p>
+                            <div class="mb-3">
+                                <span class="volume-badge">1 л</span>
+                            </div>
+                            <div class="price-hidden">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-semibold">Цена за 1 палету:</span>
+                                    <span class="fs-4 fw-bold text-success">192 500 ₽</span>
+                                </div>
+                                <small class="text-muted d-block mb-2">📦 В палете: 140 бут. (премиум-фасовка) <br>
+                                    Колличество бутылок в палете регулируется</small>
+                                <div class="progress mb-2" style="height: 6px;">
+                                    <div class="progress-bar bg-info" style="width: 60%"></div>
+                                </div>
+                                <small class="text-muted">* Лимитированная партия. Бронь от 2 палет. Спец заказ.</small>
+                                <small class="text-muted d-block mb-2"><br>ГОСТ <br>ТУ 10.41.59-024-
+                                    45986955-2021</small>
+                                <small class="text-muted d-block mb-2"><br>Масса нетто <br> 920 гр г</small>
+                                <small class="text-muted d-block mb-2"><br>Срок годности <br>18 месяцев </small>
+                            </div>
+                            <button type="button"
+                                class="btn btn-outline-primary w-100 rounded-pill py-2 mt-2 btn-price-toggle">Узнать
+                                оптовую цену</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ПАРТНЁРЫ И СЕРТИФИКАТЫ ================= -->
+    <section id="partners" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5 fade-in">
+                <h2 class="section-title">Доверие рынка</h2>
+                <p class="text-muted fs-5">Работаем с федеральными сетями и региональными дистрибьюторами</p>
+            </div>
+            <div class="row justify-content-center align-items-center g-4 mb-5 fade-in">
+                <div class="col-6 col-md-3 text-center p-4 border rounded-4 bg-light shadow-sm">
+                    <h5 class="text-muted mb-0 fw-bold">X5 Group</h5>
+                </div>
+                <div class="col-6 col-md-3 text-center p-4 border rounded-4 bg-light shadow-sm">
+                    <h5 class="text-muted mb-0 fw-bold">Ozon / WB</h5>
+                </div>
+                <div class="col-6 col-md-3 text-center p-4 border rounded-4 bg-light shadow-sm">
+                    <h5 class="text-muted mb-0 fw-bold">Магнит</h5>
+                </div>
+                <div class="col-6 col-md-3 text-center p-4 border rounded-4 bg-light shadow-sm">
+                    <h5 class="text-muted mb-0 fw-bold">ЗавАгро</h5>
+                </div>
+            </div>
+            <div class="text-center mb-4 fade-in">
+                <h4 class="mb-4">Сертификаты и документация</h4>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 bg-white shadow-sm rounded-4 text-center border-top border-4 border-success">
+                            <i class="fa-solid fa-file-shield fa-3x text-success mb-3"></i>
+                            <p class="small mb-0 fw-semibold">Сертификат ТР ТС</p>
+                        </div>
+                        <a href="docs.html" class="btnn">Ознакомиться</a>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 bg-white shadow-sm rounded-4 text-center border-top border-4 border-warning">
+                            <i class="fa-solid fa-flask fa-3x text-warning mb-3"></i>
+                            <p class="small mb-0 fw-semibold">Протокол испытаний</p>
+                        </div>
+                        <a href="docs1.html" class="btnn">Ознакомиться</a>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 bg-white shadow-sm rounded-4 text-center border-top border-4 border-info">
+                            <i class="fa-solid fa-clipboard-check fa-3x text-info mb-3"></i>
+                            <p class="small mb-0 fw-semibold">Декларация ГОСТ</p>
+                        </div>
+                        <a href="docs2.html" class="btnn">Ознакомиться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= СТАТИСТИКА ================= -->
+    <section class="py-5" style="background: var(--grad-primary); color: #fff;">
+        <div class="container">
+            <div class="row g-4 text-center" id="stats">
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Лет на рынке</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="350">0</div>
+                        <div class="stat-label">Оптовых партнёров</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="12000">0</div>
+                        <div class="stat-label">Тонн масла / год</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Натуральность</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ОТЗЫВЫ И ВОПРОСЫ ================= -->
+    <section id="reviews" class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 fade-in">
+                    <h2 class="section-title mb-4">Отзывы партнёров</h2>
+                    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card-custom p-4">
+                                    <p class="mb-3 fst-italic fs-5">"Сотрудничаем с «Кубаночкой» более 3 лет. Стабильное
+                                        качество, чёткие сроки отгрузки. Программа лояльности реально работает."</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width:45px;height:45px; color:#000; font-weight:700;">А</div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Алексей В.</h6><small class="text-muted">Директор закупки,
+                                                "Сеть Юг"</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-custom p-4">
+                                    <p class="mb-3 fst-italic fs-5">"Эко-упаковка — это важно для нас. Наши клиенты
+                                        ценят заботу о природе. Масло вкусное, качественное, будем сотрудничать дальше."
+                                    </p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width:45px;height:45px; color:#000; font-weight:700;">О</div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Ольга Т.</h6><small class="text-muted">Владелица эко-лавки,
+                                                г. Сочи</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-custom p-4">
+                                    <p class="mb-3 fst-italic fs-5">"Удобная фасовка по 5 литров для общепита. Масло не
+                                        пенится при жарке, не дымит. Отличный выбор для нашей пекарни."</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="bg-danger rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width:45px;height:45px; color:#fff; font-weight:700;">Н</div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Наталья Ф.</h6><small class="text-muted">Управляющая
+                                                пекарней "Хлебный дом"</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-custom p-4">
+                                    <p class="mb-3 fst-italic fs-5">"Лучшее масло из всех, что мы пробовали! Честный
+                                        состав, прозрачная бутылка — видно качество. Программа лояльности приятный
+                                        бонус."</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width:45px;height:45px; color:#fff; font-weight:700;">Р</div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Руслан Г.</h6><small class="text-muted">Снабженец, Сеть
+                                                кафе "Уют"</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-custom p-4">
+                                    <p class="mb-3 fst-italic fs-5">"Щадящая очистка действительно сохраняет витамины.
+                                        Проводили лабораторные исследования — всё соответствует заявленному.
+                                        Рекомендую!"</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="bg-info rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width:45px;height:45px; color:#fff; font-weight:700;">И</div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Игорь Н.</h6><small class="text-muted">Нутрициолог,
+                                                консультант"</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-custom p-4">
+                                    <p class="mb-3 fst-italic fs-5">"Перешли на эко-упаковку вместе с вами. Покупатели
+                                        оценили и прибавилось больше партнёров. Качество масла не падает от партии к
+                                        партии."</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width:45px;height:45px; color:#fff; font-weight:700;">М</div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Марина С.</h6><small class="text-muted">Управляющий,
+                                                "Органик Маркет"</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon bg-dark rounded p-3"
+                                aria-hidden="true"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon bg-dark rounded p-3"
+                                aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in feedback-block">
+                    <div class="card-custom p-4 h-100 border-2 border-success">
+                        <h4 class="mb-3">Задать вопрос или оставить отзыв</h4>
+                        <form id="feedbackForm">
+                            <div class="mb-3"><label class="form-label fw-semibold">Ваше имя</label><input type="text"
+                                    class="form-control" required></div>
+                            <div class="mb-3"><label class="form-label fw-semibold">Email или Телефон</label><input
+                                    type="text" class="form-control" required></div>
+                            <div class="mb-3"><label class="form-label fw-semibold">Текст сообщения</label><textarea
+                                    class="form-control" rows="4" required></textarea></div>
+                            <button type="submit" class="btn btn-cta w-100">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= НОВОСТИ ================= -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4 fade-in">
+                <h2 class="section-title mb-0">Новости и акции</h2>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Все новости</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-in">
+                    <div class="card-custom p-4 h-100 border-start border-4 border-warning">
+                        <span class="badge bg-warning text-dark mb-2 px-3 py-2">🔥 Акция</span>
+                        <h5 class="mt-2">Скидка 10% на предзаказ к сезону</h5>
+                        <p class="text-muted small">При заключении договора до 15 мая предоставляем специальные условия
+                            на первую партию рафинированного масла.</p>
+                        <small class="text-muted">10.04.2026</small>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card-custom p-4 h-100 border-start border-4 border-success">
+                        <span class="badge bg-success mb-2 px-3 py-2">🌿 Обновление</span>
+                        <h5 class="mt-2">Новая эко-упаковка 2026</h5>
+                        <p class="text-muted small">Полный переход на перерабатываемый пластик и бумагу. Дизайн стал
+                            чище, логистика — легче.</p>
+                        <small class="text-muted">28.03.2026</small>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card-custom p-4 h-100 border-start border-4 border-info">
+                        <span class="badge bg-info text-white mb-2 px-3 py-2">📖 Блог</span>
+                        <h5 class="mt-2">Как хранить масло оптом?</h5>
+                        <p class="text-muted small">5 простых правил от технолога «Кубаночки», которые помогут сохранить
+                            вкус и полезные свойства продукта.</p>
+                        <small class="text-muted">15.03.2026</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= КОНТАКТЫ И ЗАЯВКА ================= -->
+    <section id="contact" class="section-padding" style="background: linear-gradient(to top, #f9fbf5, #fff9e6);">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 fade-in">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <p class="text-muted mb-4">Готовы обсудить условия оптового сотрудничества? Заполните форму или
+                        позвоните напрямую.</p>
+                    <div class="mb-4 p-3 bg-white rounded-4 shadow-sm">
+                        <h5 class="d-flex align-items-center"><i class="fa-solid fa-phone text-success me-3 fa-lg"></i>
+                            Телефоны</h5>
+                        <p class="mb-1 ms-4 fw-semibold">+7 (861) 246-75-55</p>
+                        <p class="mb-1 ms-4">+7 (861) 241-10-00</p>
+                        <p class="ms-4">+7 (861) 243-93-03</p>
+                    </div>
+                    <div class="mb-4 p-3 bg-white rounded-4 shadow-sm">
+                        <h5 class="d-flex align-items-center"><i
+                                class="fa-solid fa-envelope text-warning me-3 fa-lg"></i> Email</h5>
+                        <p class="ms-4">info@kubanochka-oil.ru</p>
+                    </div>
+                    <div class="mb-4 p-3 bg-white rounded-4 shadow-sm">
+                        <h5 class="d-flex align-items-center"><i
+                                class="fa-solid fa-location-dot text-danger me-3 fa-lg"></i> Адресс склада</h5>
+                        <p class="ms-4">Краснодарский край, г. Краснодар, ул. Промышленная, 45</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 fade-in">
+                    <div class="card-custom p-4 border-2 border-warning">
+                        <h4 class="mb-4">Заявка на оптовое сотрудничество</h4>
+                        <form id="orderForm">
+                            <div class="row g-3">
+                                <div class="col-md-6"><label class="form-label fw-semibold">Название
+                                        компании</label><input type="text" class="form-control" placeholder="ООО / ИП"
+                                        required></div>
+                                <div class="col-md-6"><label class="form-label fw-semibold">Контактное
+                                        лицо</label><input type="text" class="form-control" required></div>
+                                <div class="col-md-6"><label class="form-label fw-semibold">Телефон</label><input
+                                        type="tel" class="form-control" placeholder="+7 (___) ___-__-__" required></div>
+                                <div class="col-md-6"><label class="form-label fw-semibold">Email</label><input
+                                        type="email" class="form-control" required></div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Интересующий продукт</label>
+                                    <select class="form-select">
+                                        <option>Нерафинированное</option>
+                                        <option>Рафинированное</option>
+                                        <option>С добавлением оливкового</option>
+                                        <option>Весь ассортимент</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6"><label class="form-label fw-semibold">Планируемый объём
+                                        (л/мес)</label><input type="number" class="form-control"
+                                        placeholder="Например: 5000"></div>
+                                <div class="col-12"><label class="form-label fw-semibold">Комментарий</label><textarea
+                                        class="form-control" rows="3"
+                                        placeholder="Уточнения по доставке, упаковке или срокам..."></textarea></div>
+                                <div class="col-12 mt-3">
+                                    <button type="submit" class="btn btn-cta w-100 py-2">Отправить заявку</button>
+                                    <small class="text-muted d-block mt-2 text-center">Нажимая кнопку, вы соглашаетесь
+                                        на обработку персональных данных.</small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ФУТЕР ================= -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><i class="fa-solid fa-sun text-warning"></i> КУБАНОЧКА</h5>
+                    <p class="small">ООО «Гранд-Стар» — производитель натурального подсолнечного масла. Оптовые поставки
+                        по всей России. Качество, проверенное временем.</p>
+                    <form class="mt-3 d-flex">
+                        <input type="email" class="form-control form-control-sm" placeholder="Ваш Email для рассылки">
+                        <button type="submit" class="btn btn-warning btn-sm ms-2 px-3 fw-bold">Подписаться</button>
+                    </form>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#partners">Партнёры</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Информация</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="fa-solid fa-phone me-2"></i> +7 (861) 246-75-55</li>
+                        <li><i class="fa-solid fa-envelope me-2"></i> info@kubanochka-oil.ru</li>
+                        <li><i class="fa-solid fa-clock me-2"></i> Пн-Пт: 08:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center small">
+                <p>&copy; 2026 ООО «Гранд-Стар». Все права защищены. Сайт создан по техническому заданию заказчика.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= МОДАЛЬНОЕ ОКНО ПОИСКА ================= -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Поиск по сайту</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input id="searchInput" type="text" class="form-control form-control-lg"
+                            placeholder="Например: Отзывы, Каталог, Партнёры...">
+                        <button id="searchBtn" class="btn btn-cta px-4" type="button">Найти</button>
+                    </div>
+                    <div id="searchFeedback" class="mt-3 small text-center text-muted"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
